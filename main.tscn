@@ -1,0 +1,203 @@
+[gd_scene load_steps=7 format=3 uid="uid://cekg6bgdyo2gr"]
+
+[ext_resource type="Script" uid="uid://oe0djbm6psg" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="FontFile" uid="uid://ddcsjghb5ybf3" path="res://beachday.ttf" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c4bufml75qfb7" path="res://images/IMG_0219.PNG" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://ck4yysyvdi63i" path="res://images/scroll background.jpg" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b81f2j0k3dktr" path="res://images/IMG_0218.PNG" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://he0cpabwhcxy" path="res://images/IMG_0217.PNG" id="6_7mycd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="ShibaImage" type="Sprite2D" parent="."]
+position = Vector2(296, 437.5)
+scale = Vector2(0.345, 0.3305)
+texture = ExtResource("3_1bvp3")
+
+[node name="ShibaButton" type="TextureButton" parent="."]
+offset_left = 23.0
+offset_top = 141.0
+offset_right = 493.0
+offset_bottom = 639.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -4096
+offset_right = 1190.0
+offset_bottom = 667.0
+mouse_filter = 2
+color = Color(1, 0.831373, 0.909804, 1)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 21.0
+offset_right = 454.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(1, 0.470588, 0.631373, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 60
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 472.0
+offset_top = 149.0
+offset_right = 1124.0
+offset_bottom = 612.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_1bvp3")
+expand_mode = 5
+
+[node name="HatLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 33.0
+offset_right = 647.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 70
+text = "hat (20) "
+
+[node name="HatImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/TextureRect"]
+position = Vector2(205, 151.25)
+scale = Vector2(0.104, 0.12525)
+texture = ExtResource("5_lquwl")
+
+[node name="HatButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 136.0
+
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_1bvp3")
+expand_mode = 5
+
+[node name="AddFiveLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect2"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 35.0
+offset_right = 616.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 55
+text = "+5 points per click (40)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddFiveButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect2"]
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 136.0
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_1bvp3")
+expand_mode = 5
+
+[node name="BandanaImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/TextureRect3"]
+position = Vector2(129, 70)
+scale = Vector2(0.172875, 0.157875)
+texture = ExtResource("6_7mycd")
+
+[node name="BandanaLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect3"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 30.0
+offset_right = 582.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 70
+text = "Bandana (80)"
+
+[node name="BandanaButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect3"]
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 136.0
+
+[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_1bvp3")
+expand_mode = 5
+
+[node name="AddTenLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect4"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 34.0
+offset_right = 641.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 55
+text = "+10 points per click (150)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddTenButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect4"]
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 136.0
+
+[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_1bvp3")
+expand_mode = 5
+
+[node name="AddTwentyLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect5"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 36.0
+offset_right = 659.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 55
+text = "+20 points per click (500)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddTwentyButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect5"]
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 136.0
+
+[node name="UpgradeLabel" type="Label" parent="."]
+offset_left = 606.0
+offset_top = 46.0
+offset_right = 946.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 80
+text = "Upgrade!!!"
+
+[node name="HatSprite" type="Sprite2D" parent="."]
+position = Vector2(314.651, 434.231)
+rotation = -0.132171
+scale = Vector2(0.36249, 0.346)
+texture = ExtResource("5_lquwl")
+
+[node name="BandanaSprite" type="Sprite2D" parent="."]
+position = Vector2(299.5, 429)
+scale = Vector2(0.3945, 0.30375)
+texture = ExtResource("6_7mycd")
+
+[connection signal="pressed" from="ShibaButton" to="." method="_on_shiba_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect/HatButton" to="." method="_on_hat_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect2/AddFiveButton" to="." method="_on_add_five_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect3/BandanaButton" to="." method="_on_bandana_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect4/AddTenButton" to="." method="_on_add_ten_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect5/AddTwentyButton" to="." method="_on_add_twenty_button_pressed"]
