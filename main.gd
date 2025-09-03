@@ -4,6 +4,7 @@ var score = 0
 var points_per_click = 1
 var num_points_per_click = 1
 
+@onready var win_window = $WinWindow
 @onready var score_label = $ScoreLabel
 @onready var hat_sprite = $HatSprite
 @onready var bandana_sprite = $BandanaSprite
@@ -17,9 +18,10 @@ var num_points_per_click = 1
 ]
 
 func _ready():
-	score_label.text = "Click Me!"
+	score_label.text = "Click the Shiba to earn points!"
 	hat_sprite.visible = false
 	bandana_sprite.visible = false
+	win_window.visible = false
 
 func show_accessory(accessory: Node):
 	for acc in accessories:
@@ -30,6 +32,7 @@ func show_accessory(accessory: Node):
 func _on_shiba_button_pressed():
 	score += points_per_click
 	update_score_label()
+	if_win()
 
 # update scores
 func update_score_label():
@@ -37,6 +40,7 @@ func update_score_label():
 
 # hat button
 func _on_hat_button_pressed():
+	print("Hat button works!")
 	if score >= 20:
 		score -= 20
 		show_accessory(hat_sprite)
@@ -87,3 +91,7 @@ func _on_add_twenty_button_pressed():
 		else:
 			points_per_click += 20
 		update_score_label()
+
+func if_win():
+	if score >= 1000:
+		win_window.visible = true

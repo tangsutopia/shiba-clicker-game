@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cekg6bgdyo2gr"]
+[gd_scene load_steps=10 format=3 uid="uid://cekg6bgdyo2gr"]
 
-[ext_resource type="Script" uid="uid://oe0djbm6psg" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dvgktvgfc6724" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="FontFile" uid="uid://ddcsjghb5ybf3" path="res://beachday.ttf" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://c4bufml75qfb7" path="res://images/IMG_0219.PNG" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://ck4yysyvdi63i" path="res://images/scroll background.jpg" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://b81f2j0k3dktr" path="res://images/IMG_0218.PNG" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://hcrg2udyednr" path="res://images/IMG_0218.PNG" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://he0cpabwhcxy" path="res://images/IMG_0217.PNG" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://dxusto8y68jtj" path="res://audio/japanese-jazz-2-385180.mp3" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://bsm0btwwgtgoo" path="res://audio/fnaf-hooray.mp3" id="8_5vw27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
+bg_color = Color(0.976471, 0.847059, 0.803922, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0xm2m")
@@ -36,6 +41,8 @@ offset_bottom = 118.0
 theme_override_colors/font_color = Color(1, 0.470588, 0.631373, 1)
 theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 60
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 offset_left = 472.0
@@ -54,6 +61,11 @@ mouse_filter = 2
 texture = ExtResource("4_1bvp3")
 expand_mode = 5
 
+[node name="HatImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/TextureRect"]
+position = Vector2(151, 144)
+scale = Vector2(0.16, 0.12275)
+texture = ExtResource("5_272bh")
+
 [node name="HatLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect"]
 layout_mode = 0
 offset_left = 277.0
@@ -65,12 +77,8 @@ theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 70
 text = "hat (20) "
 
-[node name="HatImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/TextureRect"]
-position = Vector2(205, 151.25)
-scale = Vector2(0.104, 0.12525)
-texture = ExtResource("5_lquwl")
-
 [node name="HatButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect"]
+z_index = 500
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
@@ -95,6 +103,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AddFiveButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect2"]
+z_index = 500
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
@@ -185,15 +194,77 @@ theme_override_font_sizes/font_size = 80
 text = "Upgrade!!!"
 
 [node name="HatSprite" type="Sprite2D" parent="."]
-position = Vector2(314.651, 434.231)
-rotation = -0.132171
-scale = Vector2(0.36249, 0.346)
-texture = ExtResource("5_lquwl")
+position = Vector2(352, 449)
+rotation = -0.291229
+scale = Vector2(0.360687, 0.409191)
+texture = ExtResource("5_272bh")
 
 [node name="BandanaSprite" type="Sprite2D" parent="."]
 position = Vector2(299.5, 429)
 scale = Vector2(0.3945, 0.30375)
 texture = ExtResource("6_7mycd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_272bh")
+autoplay = true
+
+[node name="WinWindow" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(600, 300)
+
+[node name="Panel" type="Panel" parent="WinWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_272bh")
+
+[node name="WinText" type="Label" parent="WinWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.960784, 0.380392, 0.454902, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 90
+text = "Hoorayyy you've Won!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="QuitButton" type="Label" parent="WinWindow"]
+visible = false
+offset_left = 34.0
+offset_top = 46.0
+offset_right = 461.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0.960784, 0.380392, 0.454902, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 130
+text = "You've Won!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ReplayButton" type="Label" parent="WinWindow"]
+visible = false
+offset_left = 34.0
+offset_top = 18.0
+offset_right = 461.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(0.960784, 0.380392, 0.454902, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 130
+text = "You've Won!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Fnaf-hooray" type="AudioStreamPlayer" parent="WinWindow"]
+stream = ExtResource("8_5vw27")
+autoplay = true
 
 [connection signal="pressed" from="ShibaButton" to="." method="_on_shiba_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect/HatButton" to="." method="_on_hat_button_pressed"]

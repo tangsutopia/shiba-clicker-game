@@ -1,0 +1,274 @@
+[gd_scene load_steps=17 format=3 uid="uid://bukt2ndo6lmht"]
+
+[ext_resource type="Script" uid="uid://btowm14p7nb50" path="res://start.gd" id="1_ots34"]
+[ext_resource type="FontFile" uid="uid://ddcsjghb5ybf3" path="res://beachday.ttf" id="2_1n0d2"]
+[ext_resource type="Texture2D" uid="uid://ufpmmrkvs74j" path="res://images/image0 (1).png" id="3_y5hus"]
+[ext_resource type="AudioStream" uid="uid://dxusto8y68jtj" path="res://audio/japanese-jazz-2-385180.mp3" id="4_oiuna"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5hus"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oiuna"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a3qj"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1n0d2"]
+bg_color = Color(0.821646, 0.86112, 0.990612, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g38d0"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pob1m"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gophc"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0nl4"]
+bg_color = Color(0.823529, 0.862745, 0.992157, 1)
+
+[sub_resource type="Animation" id="Animation_4a3qj"]
+resource_name = "Expand"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6.06667, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.55, 0.543), Vector2(0.72, 0.71), Vector2(0.55, 0.542), Vector2(0.72, 0.71), Vector2(0.55, 0.542)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Title1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.36667, 3.16667, 5.26667, 7.43333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(31, 69), Vector2(10, 10), Vector2(31, 69), Vector2(5, 5), Vector2(31, 69)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Title2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.13333, 2.59, 4.08, 5.16, 6.36, 7.79),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.10472, 0.0575959, -0.10472, 0.0575959, -0.10472, 0.0575959, -0.10472]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Title3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.29, 2.8, 4.18, 5.83, 7.36),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.9, 0.9), Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g38d0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.55, 0.543)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Title1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(31, 69)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Title2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.10472]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Title3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pob1m"]
+_data = {
+&"Expand": SubResource("Animation_4a3qj"),
+&"RESET": SubResource("Animation_g38d0")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da165"]
+bg_color = Color(0.976749, 0.846284, 0.804236, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ots34")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1189.0
+offset_bottom = 664.0
+mouse_filter = 2
+color = Color(1, 0.831373, 0.909804, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Title1" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 69.0
+offset_right = 406.0
+offset_bottom = 228.0
+rotation = 0.0942478
+theme_override_colors/font_color = Color(1, 0.470588, 0.631373, 1)
+theme_override_colors/font_shadow_color = Color(0.54902, 0.211765, 0.921569, 1)
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 150
+text = "Shiba"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Title2" type="Label" parent="."]
+offset_left = 363.0
+offset_top = -17.0
+offset_right = 875.0
+offset_bottom = 223.0
+rotation = -0.10472
+theme_override_colors/font_color = Color(1, 0.470588, 0.631373, 1)
+theme_override_colors/font_shadow_color = Color(0.54902, 0.211765, 0.921569, 1)
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 160
+text = "Clicker"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Title3" type="Label" parent="."]
+offset_left = 830.0
+offset_top = 82.0
+offset_right = 1131.0
+offset_bottom = 321.0
+rotation = -0.317534
+scale = Vector2(0.9, 0.9)
+theme_override_colors/font_color = Color(1, 0.470588, 0.631373, 1)
+theme_override_colors/font_shadow_color = Color(0.54902, 0.211765, 0.921569, 1)
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 120
+text = "Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 602.0
+offset_top = 267.0
+offset_right = 986.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(0.964706, 0.384314, 0.533333, 1)
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_y5hus")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oiuna")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4a3qj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1n0d2")
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="InstructionButton" type="Button" parent="."]
+offset_left = 598.0
+offset_top = 459.0
+offset_right = 987.0
+offset_bottom = 608.0
+theme_override_colors/font_color = Color(0.966533, 0.383255, 0.533533, 1)
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_g38d0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pob1m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gophc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0nl4")
+text = "Rules"
+metadata/_edit_use_anchors_ = true
+
+[node name="ShibaImage" type="Sprite2D" parent="."]
+position = Vector2(396.741, 645.914)
+rotation = -0.140937
+scale = Vector2(0.55, 0.543)
+texture = ExtResource("3_y5hus")
+
+[node name="Japanese-jazz-2-385180" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_oiuna")
+autoplay = true
+
+[node name="Movement" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ShibaImage")
+libraries = {
+&"": SubResource("AnimationLibrary_pob1m")
+}
+playback_auto_capture = false
+
+[node name="Window" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(500, 300)
+
+[node name="Panel" type="Panel" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_da165")
+
+[node name="Label" type="Label" parent="Window"]
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 472.0
+offset_bottom = 281.0
+theme_override_colors/font_color = Color(0.961053, 0.38132, 0.456106, 1)
+theme_override_fonts/font = ExtResource("2_1n0d2")
+theme_override_font_sizes/font_size = 50
+text = "Click on the Shiba to earn points and fun upgrades! Win at 1000 points."
+horizontal_alignment = 3
+vertical_alignment = 3
+autowrap_mode = 2
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="InstructionButton" to="." method="_on_instruction_button_pressed"]
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
