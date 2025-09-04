@@ -1,11 +1,11 @@
 extends Node2D
 
 @onready var rules_popup = $Window
-@onready var animation_player = $Movement
+#@onready var animation_player = $Movement
 
 func _ready():
 	rules_popup.hide()
-	animation_player.play("Movement")
+	#animation_player.play("Movement")
 
 
 func _on_start_button_pressed():

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjc13nlbj1tyw"]
+
+[ext_resource type="Script" uid="uid://ctg5y63i6k62p" path="res://node_2d.gd" id="1_qrja6"]
+[ext_resource type="AudioStream" uid="uid://bsm0btwwgtgoo" path="res://audio/fnaf-hooray.mp3" id="2_co24e"]
+[ext_resource type="AudioStream" uid="uid://dxusto8y68jtj" path="res://audio/japanese-jazz-2-385180.mp3" id="3_feb8i"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qrja6")
+
+[node name="TestEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_co24e")
+volume_db = 5.333
+autoplay = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_feb8i")
