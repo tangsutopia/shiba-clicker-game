@@ -57,18 +57,43 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="AddOne" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_1bvp3")
 expand_mode = 5
 
-[node name="HatImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/TextureRect"]
+[node name="AddOneLabel" type="Label" parent="ScrollContainer/VBoxContainer/AddOne"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 35.0
+offset_right = 616.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
+theme_override_fonts/font = ExtResource("1_1bvp3")
+theme_override_font_sizes/font_size = 55
+text = "+1 points per click (10)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddOneButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/AddOne"]
+z_index = 500
+layout_mode = 0
+offset_right = 646.0
+offset_bottom = 136.0
+
+[node name="Hat" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_1bvp3")
+expand_mode = 5
+
+[node name="HatImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Hat"]
 position = Vector2(151, 144)
 scale = Vector2(0.16, 0.12275)
 texture = ExtResource("5_272bh")
 
-[node name="HatLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect"]
+[node name="HatLabel" type="Label" parent="ScrollContainer/VBoxContainer/Hat"]
 layout_mode = 0
 offset_left = 277.0
 offset_top = 33.0
@@ -79,19 +104,19 @@ theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 70
 text = "hat (20) "
 
-[node name="HatButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect"]
+[node name="HatButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Hat"]
 z_index = 500
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
 
-[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="AddFive" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_1bvp3")
 expand_mode = 5
 
-[node name="AddFiveLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect2"]
+[node name="AddFiveLabel" type="Label" parent="ScrollContainer/VBoxContainer/AddFive"]
 layout_mode = 0
 offset_left = 31.0
 offset_top = 35.0
@@ -104,24 +129,24 @@ text = "+5 points per click (40)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AddFiveButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect2"]
+[node name="AddFiveButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/AddFive"]
 z_index = 500
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
 
-[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="Bandana" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_1bvp3")
 expand_mode = 5
 
-[node name="BandanaImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/TextureRect3"]
+[node name="BandanaImage" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Bandana"]
 position = Vector2(129, 70)
 scale = Vector2(0.172875, 0.157875)
 texture = ExtResource("6_7mycd")
 
-[node name="BandanaLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect3"]
+[node name="BandanaLabel" type="Label" parent="ScrollContainer/VBoxContainer/Bandana"]
 layout_mode = 0
 offset_left = 205.0
 offset_top = 30.0
@@ -132,18 +157,18 @@ theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 70
 text = "Bandana (80)"
 
-[node name="BandanaButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect3"]
+[node name="BandanaButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Bandana"]
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
 
-[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="AddTen" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_1bvp3")
 expand_mode = 5
 
-[node name="AddTenLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect4"]
+[node name="AddTenLabel" type="Label" parent="ScrollContainer/VBoxContainer/AddTen"]
 layout_mode = 0
 offset_left = 9.0
 offset_top = 34.0
@@ -152,22 +177,22 @@ offset_bottom = 106.0
 theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
 theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 55
-text = "+10 points per click (150)"
+text = "+10 points per click (200)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AddTenButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect4"]
+[node name="AddTenButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/AddTen"]
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
 
-[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+[node name="AddTwenty" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_1bvp3")
 expand_mode = 5
 
-[node name="AddTwentyLabel" type="Label" parent="ScrollContainer/VBoxContainer/TextureRect5"]
+[node name="AddTwentyLabel" type="Label" parent="ScrollContainer/VBoxContainer/AddTwenty"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 36.0
@@ -180,7 +205,7 @@ text = "+20 points per click (500)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AddTwentyButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/TextureRect5"]
+[node name="AddTwentyButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/AddTwenty"]
 layout_mode = 0
 offset_right = 646.0
 offset_bottom = 136.0
@@ -209,6 +234,7 @@ texture = ExtResource("6_7mycd")
 [node name="WinWindow" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(850, 400)
+visible = false
 
 [node name="Panel" type="Panel" parent="WinWindow"]
 anchors_preset = 15
@@ -299,10 +325,11 @@ stream = ExtResource("10_4c57u")
 volume_db = 12.0
 
 [connection signal="pressed" from="ShibaButton" to="." method="_on_shiba_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect/HatButton" to="." method="_on_hat_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect2/AddFiveButton" to="." method="_on_add_five_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect3/BandanaButton" to="." method="_on_bandana_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect4/AddTenButton" to="." method="_on_add_ten_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureRect5/AddTwentyButton" to="." method="_on_add_twenty_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/AddOne/AddOneButton" to="." method="_on_add_one_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Hat/HatButton" to="." method="_on_hat_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/AddFive/AddFiveButton" to="." method="_on_add_five_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Bandana/BandanaButton" to="." method="_on_bandana_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/AddTen/AddTenButton" to="." method="_on_add_ten_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/AddTwenty/AddTwentyButton" to="." method="_on_add_twenty_button_pressed"]
 [connection signal="pressed" from="WinWindow/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="WinWindow/ReplayButton" to="." method="_on_replay_button_pressed"]
