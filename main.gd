@@ -42,6 +42,10 @@ var add_20_price = 500
 
 func _ready():
 	score_label.text = "Click the Shiba to earn points!"
+	add_1_price_label.text = "+1 points per click (10)"
+	add_5_price_label.text = "+5 points per click (40)"
+	add_10_price_label.text = "+10 points per click (200)"
+	add_20_price_label.text = "+20 points per click (500)"
 	hat_sprite.visible = false
 	bandana_sprite.visible = false
 	win_window.hide()
@@ -139,4 +143,10 @@ func _on_quit_button_pressed():
 
 func _on_replay_button_pressed():
 	score = 0
+	points_per_click = 1
+	num_points_per_click = 1
+	add_1_price = 10
+	add_5_price = 40
+	add_10_price = 200
+	add_20_price = 500
 	_ready()

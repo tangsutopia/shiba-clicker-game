@@ -72,7 +72,6 @@ offset_bottom = 105.0
 theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
 theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 55
-text = "+1 points per click (10)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -125,7 +124,6 @@ offset_bottom = 105.0
 theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
 theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 55
-text = "+5 points per click (40)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -177,7 +175,6 @@ offset_bottom = 106.0
 theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
 theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 55
-text = "+10 points per click (200)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -201,7 +198,6 @@ offset_bottom = 108.0
 theme_override_colors/font_color = Color(1, 0.468691, 0.630523, 1)
 theme_override_fonts/font = ExtResource("1_1bvp3")
 theme_override_font_sizes/font_size = 55
-text = "+20 points per click (500)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -234,7 +230,6 @@ texture = ExtResource("6_7mycd")
 [node name="WinWindow" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(850, 400)
-visible = false
 
 [node name="Panel" type="Panel" parent="WinWindow"]
 anchors_preset = 15
